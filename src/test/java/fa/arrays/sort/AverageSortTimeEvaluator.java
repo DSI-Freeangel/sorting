@@ -12,9 +12,9 @@ public class AverageSortTimeEvaluator {
         this.retryCount = retryCount;
     }
 
-    public long sort(Integer[] inputArray, SortType sortType) {
+    public long sort(int size, SortType sortType) {
         for(int i = 0; i < retryCount; i ++) {
-            Integer[] array = TestUtils.copy(inputArray);
+            Integer[] array = TestUtils.generateRandomArray(size);
             Stopwatch timer = Stopwatch.createStarted();
             SortingUtils.sort(array, Integer::compareTo, sortType);
             timer.stop();

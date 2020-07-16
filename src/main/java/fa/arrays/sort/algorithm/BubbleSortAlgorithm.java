@@ -11,15 +11,17 @@ public class BubbleSortAlgorithm<T> implements SortingAlgorithm<T> {
         if(array.length == 0) {
             return;
         }
+        int sortedCount = 0;
         boolean sorted;
         do {
             sorted = false;
-            for(int i = 1; i < array.length; i++) {
+            for(int i = 1; i < array.length - sortedCount; i++) {
                 if(comparator.compare(array[i-1], array[i]) > 0) {
                     swap(array, i-1, i);
                     sorted = true;
                 }
             }
+            sortedCount++;
         } while(sorted);
     }
 

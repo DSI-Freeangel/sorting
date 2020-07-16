@@ -3,16 +3,13 @@ package fa.arrays.sort.algorithm;
 import fa.arrays.sort.TestUtils;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-public class QuickSortAlgorithmTest {
-
+public class HeapSortAlgorithmTest {
     public static final int SIZE = 10000;
 
     @Test
     public void sortSuccessful() {
         Integer[] array = TestUtils.generateRandomArray(SIZE);
-        QuickSortAlgorithm<Integer> algorithm = new QuickSortAlgorithm<>();
+        HeapSortAlgorithm<Integer> algorithm = new HeapSortAlgorithm<>();
         algorithm.sort(array, Integer::compareTo);
         TestUtils.verifySorted(array);
     }
@@ -20,7 +17,7 @@ public class QuickSortAlgorithmTest {
     @Test
     public void sortOnEmptyArray() {
         Integer[] array = {};
-        QuickSortAlgorithm<Integer> algorithm = new QuickSortAlgorithm<>();
+        HeapSortAlgorithm<Integer> algorithm = new HeapSortAlgorithm<>();
         algorithm.sort(array, Integer::compareTo);
         TestUtils.verifySorted(array);
     }
@@ -28,7 +25,7 @@ public class QuickSortAlgorithmTest {
     @Test
     public void sortOnSortedArray() {
         Integer[] array = TestUtils.generateSortedArray(SIZE);
-        QuickSortAlgorithm<Integer> algorithm = new QuickSortAlgorithm<>();
+        HeapSortAlgorithm<Integer> algorithm = new HeapSortAlgorithm<>();
         algorithm.sort(array, Integer::compareTo);
         TestUtils.verifySorted(array);
     }

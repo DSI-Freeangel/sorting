@@ -13,6 +13,9 @@ public class SortingAlgorithmFactory {
             case SELECTION_SORT: algorithm = new SelectionSortAlgorithm<>(); break;
             case INSERTION_SORT: algorithm = new InsertionSortAlgorithm<>(); break;
             case BUBBLE_SORT: algorithm = new BubbleSortAlgorithm<>(); break;
+            case MERGE_SORT: algorithm = new MergeSortAlgorithm<>(); break;
+            case HEAP_SORT: algorithm = new HeapSortAlgorithm<>(); break;
+            case RADIX_SORT: algorithm = new RadixSortAlgorithm<>(); break;
             default: throw new IllegalArgumentException("Unsupported algorithm");
         }
         return algorithm;

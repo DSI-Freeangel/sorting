@@ -6,5 +6,8 @@ public enum SortType {
     BALANCED_TREE_SORT,
     SELECTION_SORT,
     INSERTION_SORT,
-    BUBBLE_SORT
+    BUBBLE_SORT,
+    MERGE_SORT,
+    HEAP_SORT,
+    RADIX_SORT
 }
